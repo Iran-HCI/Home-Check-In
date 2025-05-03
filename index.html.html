@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Check-In</title>
+    <style>
+        body {
+            background: white;
+color: white;
+
+            font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+            text-align: center;
+            margin: 50px auto;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .logo-container img {
+            width: 260px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1, h2 {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h2 {
+            color: #b8860b;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        img {
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .btn {
+            background: #222;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.3s ease;
+            margin: 40px 0;
+        }
+        .btn:hover {
+            background: #444;
+            transform: scale(1.1);
+        }
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Check-in - CIP Service</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 80px auto 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #ffffff, #f8f8f8);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: center;
+            border: 2px solid #b8860b; 
+        }
+
+        h3 {
+            font-size: 32px;
+            color: #b8860b; 
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: navy;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: #b8860b;
+            font-weight: bold;
+        }
+
+        .cta {
+            font-weight: bold;
+            color: navy;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+
+
+
+
+
+        .hci-benefits, .persian-box {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 50px;
+            text-align: left;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+       li {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f1dc;
+            border-radius: 10px;
+            display: inline-block;
+            width: 80%;
+        }
+        .highlight {
+            color: #b8860b;
+            font-weight: bold;
+        }
+        .contact {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            color: #b8860b;
+            border-radius: 15px;
+            font-size: 22px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid #b8860b;
+        }
+        .contact a {
+            color: #b8860b;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(184, 134, 11, 0.1);
+            transition: background 0.3s ease;
+        }
+        .contact a:hover {
+            background: rgba(184, 134, 11, 0.3);
+        }
+
+     .book-now {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, navy, #001f4d);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .book-now:hover {
+            background: linear-gradient(45deg, #001f4d, navy);
+            transform: scale(1.05);
+        }
+        
+.top-ribbon {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: navy;
+            color: gold;
+            text-align: center;
+            padding: 5px 0; /* Thinner ribbon */
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .ribbon-items {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Space between items */
+            padding: 5px 0;
+        }
+        .ribbon-items button {
+            background: none;
+            border: 2px solid gold;
+            color: gold;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .ribbon-items button:hover {
+            background: gold;
+            color: navy;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+       
+
+
+     }
+        .book-now {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, navy, #001f4d);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .book-now:hover {
+            background: linear-gradient(45deg, #001f4d, navy);
+            transform: scale(1.05);
+        }
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="https://www.cipikia.co/assets/images/favicon/android-chrome-512x512.png" alt="Logo">
+    </div> 
+
+
+    <h1>Commercial Important Passengers</h1>
+    <h1>Home Check-In Service</h1>
+    <h2>Travel with Respect</h2>
+    <img src="https://www.cipikia.co/assets/images/cip/photo15414629530.jpg" alt="CIP Lounge">
+
+
+
+
+    <!-- Persian Text Section -->
+<div class="persian-text-container">
+    <h3>خدمتی منحصر بفرد در جایگاه تشریفات اختصاصی فرودگاه امام (ره)</h3>
+    <p>
+        <span class="highlight">هوم چکین</span> یک راهکار هوشمند و مدرن برای تسهیل روند چک‌این مسافران است که به شما این امکان را می‌دهد تا تمامی مراحل ورود و تحویل بار خود را به راحتی از منزل و یا محل اقامت خود انجام دهید. هدف ما ارائه خدماتی با کیفیت و صرفه‌جویی در زمان شماست.
+    </p>
+    <p><span class="title">خدمات هوم چکین (Home Check-in):</span></p>
+    <ul>
+        <li>📦 تحویل بار در منزل</li>
+        <li>⚖️ وزن‌کشی دقیق بار</li>
+        <li>✍️ امضای قرارداد حضوری</li>
+    </ul>
+    <p><span class="title">خدمات اضافی (در صورت درخواست):</span></p>
+    <ul>
+        <li>💰 پرداخت عوارض خروج از کشور</li>
+        <li>🐾 حمل حیوانات خانگی</li>
+        <li>♿ ویلچیر</li>
+        <li>🍽️ خدمات پذیرایی</li>
+        <li>🏨 رزرو سوئیت در CIP</li>
+        <li>🛍️ خرید از غرفه‌های داخل سالن</li>
+        <li>🚖 ترانسفر VIP</li>
+       
+    </ul>
+   
+    <p><strong class="why-hci">چرا هوم چکین؟</strong></p>
+    <ul class="benefits">
+        <li>✨ راحتی</li>
+        <li>🛡️ امنیت</li>
+        <li>⏳ صرفه‌جویی در زمان</li>
+    </ul>
+</div>
+
+<style>
+    @font-face {
+        font-family: 'B Titr';
+        src: url('https://example.com/B_Titr.ttf'); 
+    }
+    
+    .persian-text-container {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'B Titr', Tahoma, sans-serif;
+        color: #333;
+        direction: rtl;
+        width: 70%;
+        margin: auto;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .persian-text-container h3 {
+        font-size: 28px;
+        color: #b8860b;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .highlight {
+        font-weight: bold;
+        color: #d35400;
+        font-size: 22px;
+    }
+
+    .title {
+        font-weight: bold;
+        color: #1f618d;
+        font-size: 22px;
+    }
+
+    .benefits, ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .cost-note {
+        font-size: 18px;
+        font-weight: bold;
+        color: #c0392b;
+        margin-top: 20px;
+    }
+
+    .why-hci {
+        font-size: 24px;
+        color: #27ae60;
+    }
+</style>
+
+
+
+</div>
+        <button class="book-now" onclick="window.location.href='https://www.cipikia.co/cip/search'">Book Now</button>
+
+
+ 
+    </div>
+
+
+
+    <body>
+
+    <div class="container">
+        <h3>Exclusive Home Check-in Service at Imam Khomeini International Airport</h3>
+        <div class="info-box">
+            <h1>Skip the Hassle, Enjoy the Journey</h1>
+            <p><span class="highlight">For the first time in Iran</span>, Home Check-in is here to redefine your travel experience.</p>
+            <p>No need to rush to the airport. Our team will arrive at your <b>home, hotel, or office</b> <span class="highlight">12 hours before your flight</span> to check you in, handle your baggage, and provide your boarding pass—digitally or printed.</p>
+            <p>Relax in the exclusive <b>CIP lounge</b>, where comfort and premium services await while we take care of everything.</p>
+            <p class="cta">Reserve your Home Check-in at least <span class="highlight">24 hours before departure</span> and experience effortless travel.</p>
+        </div>
+    </div>
+</body>
+
+    <div class="contact">
+            <a href=" tel:90000999"> [CONTACT US]📞 Call Center: 90000999</a>
+            <a href="https://www.cipikia.co" target="_blank">🌐 Website: www.cipikia.co</a>
+            <a href="https://www.instagram.com/home.check_in" target="_blank">📷 Instagram: HOME.CHECK_IN</a>
+        </div>
+
+
+
+ 
+
+ <div class="top-ribbon">
+        <div class="ribbon-items">
+            <button>Register</button>
+            <button>Login</button>
+            <button>BOOK</button>
+            <button>MANAGE</button>
+            <button>EXPERIENCE</button>
+            <button>WHERE WE FLY</button>
+            <button>LOYALTY</button>
+            <button>HELP</button>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
