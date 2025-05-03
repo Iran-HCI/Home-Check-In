@@ -231,7 +231,161 @@ color: white;
             to { opacity: 1; }
         }
 
-       
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passenger Registration</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: #f8f4ee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 340px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: #3d2c29;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-align: left;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 0.2rem;
+      font-size: 0.85rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 8px 16px;
+      background-color: #6e4d42;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #8d6356;
+    }
+
+    .message {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Passenger Form</h2>
+    <form id="passenger-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label style="margin-top: 0.6rem;">
+        <input type="checkbox" id="monthly" />
+        Monthly Customer
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+    const supabaseUrl = 'https://tasufzhtycvaawxhcxrk.supabase.co'
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRhc3Vmemh0eWN2YWF3eGhjeHJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYwMDEwNzMsImV4cCI6MjA2MTU3NzA3M30.HU2Jrwd3W_gCbp0txHTKeCphT_lat1AG9sn83s25uKk'
+    const supabase = createClient(supabaseUrl, supabaseKey)
+
+    const form = document.getElementById('passenger-form')
+    const messageBox = document.getElementById('message')
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+
+      const name = document.getElementById('name').value
+      const phone = document.getElementById('phone').value
+      const email = document.getElementById('email').value
+      const isMonthly = document.getElementById('monthly').checked
+
+      const { error } = await supabase
+        .from('passengers')
+        .insert([{ name, phone_number: phone, email, is_monthly_customer: isMonthly }])
+
+      if (error) {
+        messageBox.textContent = '❌ Error: ' + error.message
+        messageBox.style.color = 'crimson'
+      } else {
+        messageBox.textContent = '✅ Info saved! We will contact you as soon as possible.'
+        messageBox.style.color = 'green'
+        form.reset()
+      }
+    })
+  </script>
+</body>
+</html>
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
      }
